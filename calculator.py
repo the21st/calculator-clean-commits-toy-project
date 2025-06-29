@@ -17,7 +17,7 @@ def subtract(a, b):
 
 def multiply(a, b):
     """
-    This function takes two numbers and returns their proudct.
+    This function takes two numbers and returns their product.
     """
     return a * b
 

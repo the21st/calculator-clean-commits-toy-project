@@ -1,6 +1,6 @@
 import unittest
 
-from calculator import add, multiply, subtract  # Import the functions to be tested
+from calculator import add, divide, multiply, subtract  # Import the functions to be tested
 
 
 class TestCalculator(unittest.TestCase):
@@ -24,6 +24,16 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(multiply(3, 2), 6)
         self.assertEqual(multiply(-4, 5), -20)
         self.assertEqual(multiply(0, 100), 0)
+
+    def test_divide(self):
+        """
+        Test the divide function.
+        """
+        self.assertEqual(divide(10, 2), 5)
+        self.assertEqual(divide(-6, 3), -2)
+        self.assertEqual(divide(5, 2), 2.5)
+        with self.assertRaises(ValueError):
+            divide(1, 0)
 
     def test_subtract(self):
         """
