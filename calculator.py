@@ -14,11 +14,13 @@ def subtract(a, b):
     """
     return a - b
 
+
 def multiply(a, b):
     """
     This function takes two numbers and returns their proudct.
     """
     return a * b
+
 
 def divide(a, b):
     """
@@ -28,6 +30,7 @@ def divide(a, b):
     if b == 0:
         raise ValueError("Cannot divide by zero")
     return a / b
+
 
 def main():
     """Main function to run the calculator."""
@@ -39,7 +42,7 @@ def main():
     parser.add_argument(
         "operation",
         type=str,
-        choices=["add", "subtract", 'multiply', 'divide'],
+        choices=["add", "subtract", "multiply", "divide"],
         help="The operation to perform.",
     )
     parser.add_argument("a", type=float, help="The first number.")
@@ -52,9 +55,9 @@ def main():
         result = add(args.a, args.b)
     elif args.operation == "subtract":
         result = subtract(args.a, args.b)
-    elif args.operation == 'multiply':
+    elif args.operation == "multiply":
         result = multiply(args.a, args.b)
-    elif args.operation == 'divide':
+    elif args.operation == "divide":
         result = divide(args.a, args.b)
 
     print(f"Result: {result}")
