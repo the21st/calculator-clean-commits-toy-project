@@ -1,6 +1,6 @@
 import unittest
 
-from calculator import add, subtract  # Import the functions to be tested
+from calculator import add, multiply, subtract  # Import the functions to be tested
 
 
 class TestCalculator(unittest.TestCase):
@@ -16,6 +16,14 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(add(-1, 1), 0)
         self.assertEqual(add(-5, -5), -10)
         self.assertEqual(add(0, 0), 0)
+
+    def test_multiply(self):
+        """
+        Test the multiply function.
+        """
+        self.assertEqual(multiply(3, 2), 6)
+        self.assertEqual(multiply(-4, 5), -20)
+        self.assertEqual(multiply(0, 100), 0)
 
     def test_subtract(self):
         """
